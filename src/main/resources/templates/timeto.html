@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Time-to:</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel="stylesheet">
+</head>
+<body>
+    <div style="text-align: center; height:100%;">
+        <h3 style="font-family: 'Kosugi Maru', sans-serif;" th:text="${message}"></h3>
+        <h1 style="font-family: 'Kosugi Maru', sans-serif;" th:text="${object.timeTo}"></h1>
+
+        <p style="font-family: 'Kosugi Maru', sans-serif;" th:text="${#temporals.format(object.currentTime, 'dd-MM-yyyy HH:mm')}"></p>
+        <p style="font-family: 'Kosugi Maru', sans-serif;" th:text="${object.zoneId}"></p>
+    </div>
+</body>
+</html>
